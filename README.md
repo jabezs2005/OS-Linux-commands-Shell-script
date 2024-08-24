@@ -4,20 +4,20 @@ Operating systems Lab exercise
 Linux commands-Shell scripting
 Linux commands-Shell scripting
 
-AIM:
+### AIM:
 To practice Linux Commands and Shell Scripting
 
-DESIGN STEPS:
-Step 1:
+### DESIGN STEPS:
+## Step 1:
 Navigate to any Linux environment installed on the system or installed inside a virtual environment like virtual box/vmware or online linux JSLinux (https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192) or docker.
 
-Step 2:
+## Step 2:
 Execute the following commands
 
-Step 3:
+## Step 3:
 Testing the commands for the desired output.
 
-COMMANDS:
+### COMMANDS:
 Create the following files file1, file2 as follows:
 cat > file1
 
@@ -37,7 +37,7 @@ s.n. dasgupta
 Display the content of the files
 cat < file1
 
-OUTPUT
+### OUTPUT
 chanchal singhvi
 c.k. shukla
 s.n. dasgupta
@@ -48,7 +48,7 @@ s.n. dasgupta
 sumit chakrobarty
 cat < file2
 
-OUTPUT
+### OUTPUT:
 anil aggarwal
 barun sengupta
 c.k. shukla
@@ -57,7 +57,7 @@ s.n. dasgupta
 Comparing Files
 cmp file1 file2
 
-OUTPUT
+### OUTPUT:
 file1 file2 differ: char 1, line 1
 comm file1 file2
 OUTPUT
@@ -105,7 +105,7 @@ cat > file22
 ^d
 cut -c1-3 file11
 
-OUTPUT
+### OUTPUT:
 Hel
 Thi
 cut -d "|" -f 1 file22
@@ -129,28 +129,28 @@ cat > newfile Hello world hello world
 
 grep Hello newfile
 
-OUTPUT
+### OUTPUT:
 Hello world
 grep hello newfile
 
-OUTPUT
+### OUTPUT:
 hello world
 grep -v hello newfile
 
-OUTPUT
+### OUTPUT:
 Hello world
 cat newfile | grep -i "hello"
 
-OUTPUT
+### OUTPUT:
 Hello world
 hello world
 cat newfile | grep -i -c "hello"
 
-OUTPUT
+### OUTPUT:
 2
 grep -R ubuntu /etc
 
-OUTPUT
+### OUTPUT:
 Search for PATTERN in FILEs (or stdin)
  
         -H      Add 'filename:' prefix
@@ -188,68 +188,68 @@ cat > newfile
 Hello world hello world Linux is world number 1 Unix is predecessor Linux is best in this World ^d
 
 egrep -w 'Hello|hello' newfile 
-## OUTPUT
+### OUTPUT:
 Hello world hello world
 
 
 egrep -w '(H|h)ello' newfile 
-## OUTPUT
+### OUTPUT:
 Hello world hello world
 
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
-## OUTPUT
+### OUTPUT:
 Hello world hello world
 
 
 
 
 egrep '(^hello)' newfile 
-## OUTPUT
+### OUTPUT:
 hello world
 
 egrep '(world$)' newfile 
-## OUTPUT
+### OUTPUT:
 Hello world hello world
 
 
 
 egrep '(World$)' newfile 
-## OUTPUT
+### OUTPUT:
 Linux is best in this world
 
 
 egrep '((W|w)orld$)' newfile 
-## OUTPUT
+### OUTPUT:
 Hello world hello world Linux is best in this World
 
 
 
 egrep '[1-9]' newfile 
-## OUTPUT
+### OUTPUT:
 Linux is world number 1
 
 
 
 egrep 'Linux.*world' newfile 
-## OUTPUT
+### OUTPUT:
 Linux is world number 1
 
 
 egrep 'Linux.*World' newfile 
-## OUTPUT
+### OUTPUT:
 Linux is best in this World
 
 
 egrep l{2} newfile
-## OUTPUT
+### OUTPUT:
 Hello world hello world
 
 
 
 egrep 's{1,2}' newfile
-## OUTPUT 
+### OUTPUT:
 Linux is world number 1 Unix is predecessor Linux is best in this World
 
 
@@ -259,37 +259,37 @@ cat > file23
 
 
 sed -n -e '3p' file23
-## OUTPUT
+### OUTPUT:
 1002 | tom | 5000 | Admin
 
 
 
 sed -n -e '$p' file23
-## OUTPUT
+### OUTPUT:
 1001 | Ram | 10000 | HR
 
 
 
 sed  -e 's/Ram/Sita/' file23
-## OUTPUT
+### OUTPUT:
 1001 | Sita | 10000 | HR 1001 | Sita | 10000 | HR 1002 | tom | 5000 | Admin 1003 | Joe | 7000 | Developer 1005 | Sam | 5000 | HR 1004 | Sit | 7000 | Dev 1003 | Joe | 7000 | Developer 1001 | Sita | 10000 | HR
 
 
 
 sed  -e '2s/Ram/Sita/' file23
-## OUTPUT
+### OUTPUT:
 1001 | Ram | 10000 | HR 1001 | Sita | 10000 | HR 1002 | tom | 5000 | Admin 1003 | Joe | 7000 | Developer 1005 | Sam | 5000 | HR 1004 | Sit | 7000 | Dev 1003 | Joe | 7000 | Developer 1001 | Ram | 10000 | HR
 
 
 
 sed  '/tom/s/5000/6000/' file23
-## OUTPUT
+### OUTPUT:
 1001 | Ram | 10000 | HR 1001 | Ram | 10000 | HR 1002 | tom | 6000 | Admin 1003 | Joe | 7000 | Developer 1005 | Sam | 5000 | HR 1004 | Sit | 7000 | Dev 1003 | Joe | 7000 | Developer 1001 | Ram | 10000 | HR
 
 
 
 sed -n -e '1,5p' file23
-## OUTPUT
+### OUTPUT:
 1001 | Ram | 10000 | HR 1001 | Ram | 10000 | HR 1002 | tom | 5000 | Admin 1003 | Joe | 7000 | Developer 1005 | Sam | 5000 | HR
 
 
